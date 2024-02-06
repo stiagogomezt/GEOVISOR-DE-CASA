@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geovisor con Marcador y Leyenda</title>
+ <style>
+        #map-container {
+            width: 600px; /* Ancho deseado del cuadro del mapa */
+            height: 400px; /* Altura deseada del cuadro del mapa */
+            border: 2px solid #000; /* Borde del cuadro */
+            border-radius: 10px; /* Radio de la esquina del borde */
+            margin: 0 auto; /* Centra el cuadro horizontalmente */
+        }
+    </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+<body>
+    <div id="map-container" style="height: 300px;"></div>
+    <script>
+        var map = L.map('map-container').setView([4.6858692,-74.1433963], 10); // Configura la vista inicial del mapa
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([4.6858692,-74.1433963]).addTo(map); // Añade un marcador en una posición inicial
+
+        // Añade una leyenda
+        marker.bindPopup("<b>Tu ubicación</b>").openPopup();
+    </script>
+</body>
+</html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI NOMBRE ES KEVIN GÓMEZ</title>
+    <style>
+        .centrado {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="centrado">
+        <h1>MI NOMBRE ES KEVIN GÓMEZ</h1>
+         <h2>MI DESEO ES VIAJAR AL ESPACIO</h2>  
+    </div>
+</body>
+</html>
